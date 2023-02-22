@@ -4,5 +4,3 @@
     "exclude": [ "/_framework/*", "/css/*" ]
   }
 }
-
-//staticwebapp.config.json
