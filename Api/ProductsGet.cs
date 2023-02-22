@@ -15,11 +15,11 @@ public class ProductsGet
         this.productData = productData;
     }
 
-    //[FunctionName("ProductsGet")]
-    //public async Task<IActionResult> Run(
-    //    [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "products")] HttpRequest req)
-    //{
-    //    var products = await productData.GetProducts();
-    //    return new OkObjectResult(products);
-    //}
+    [FunctionName("ProductsGet")]
+    public async Task<IActionResult> Run(
+        [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "products")] HttpRequest req)
+    {
+        var products = await productData.GetProducts();
+        return new OkObjectResult(products);
+    }
 }
